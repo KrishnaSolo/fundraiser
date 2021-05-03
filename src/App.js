@@ -12,6 +12,9 @@ function App() {
         className="feedbackIcon"
         component="button"
         variant="extended"
+        href="https://forms.gle/haZXea9QaNAAw4HMA"
+        target="_blank"
+        rel="noreferrer"
       >
         <Typography variant="button" display="block">
           Submit Donation Proof

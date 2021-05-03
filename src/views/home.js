@@ -30,7 +30,7 @@ function LinearProgressWithLabel(props) {
   return (
     <Box display="flex" alignItems="center">
       <Tooltip
-        title={`Min Goal: 5K, Max Goal: 10K, Raised so far: ${props.value}`}
+        title={`Min Goal: 5K, Max Goal: 10K, Raised so far: ${props.amt}`}
         placement="top"
         arrow
       >
@@ -39,7 +39,7 @@ function LinearProgressWithLabel(props) {
         </Box>
       </Tooltip>
       <Box minWidth={35}>
-        <Typography variant="body2" color="textSecondary">{`${Math.round(
+        <Typography variant="subtitle1" color="textSecondary">{`${Math.round(
           props.value
         )}%`}</Typography>
       </Box>
@@ -64,7 +64,7 @@ export default function Home() {
       <Container
         maxWidth="md"
         style={{
-          marginTop: "10px",
+          marginTop: "20px",
           display: "block",
           textAlign: "justify",
           fontSize: "15px",
@@ -78,7 +78,7 @@ export default function Home() {
           I started this fundraiser to help support India through the
           devestating second wave which has left the county reeling as thousands
           die from shortages of oxygen tanks/concentrators, medical equipment or
-          simply from lack of medical attention. As of May 3rd 2021, the death
+          simply from a lack of medical attention. As of May 3rd 2021, the death
           count is at approx 219K, with 3K dying every day, and over 19M people
           infected (experts backed by journalist reports believe the true
           numbers are far worse). This issue is especially personal as I have
@@ -99,9 +99,8 @@ export default function Home() {
           <strong>
             If you cannot donate, please share this site to those who can and
             reach out to friends/coworkers who have family in India and check up
-            on them! With covid restrictions, mental health is even more
-            important and I have provided a link to those who are struggling to
-            talk to professionals counsellors for free!
+            on them! With covid restrictions, mental health is more important
+            then ever, be kind and take care of each other!
           </strong>
         </Typography>
       </Container>
@@ -113,7 +112,7 @@ export default function Home() {
           justifyContent: "center",
         }}
       >
-        <LinearProgressWithLabel value={10} />
+        <LinearProgressWithLabel value={0} amt={0.0} />
       </Container>
       <Container
         maxWidth="md"
@@ -124,8 +123,8 @@ export default function Home() {
       >
         <Typography variant="h6" component="h6">
           <strong>
-            My goal is to raise 5K as of now, but I am be hoping to raise 10K. I
-            will be matching the final amount to double your generous donations!{" "}
+            My min goal is to raise 5K CAD, with the max goal of 10K CAD. I will
+            be matching the final amount to double your generous donations!{" "}
           </strong>
         </Typography>
       </Container>
@@ -142,14 +141,33 @@ export default function Home() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>How It Works?</Typography>
+            <Typography>How It Works</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
+            <Container
+              fixed
+              style={{
+                display: "block",
+                textAlign: "justify",
+              }}
+            >
+              <Typography>
+                After donating, take a screenshot of the donation receipt and
+                click on the submit proof button. You will be directed to a
+                google form where you can attach the proof. If for some reason
+                the form is not working - email me directly at{" "}
+                <strong>krishna.solanki@mail.utoronto.ca.</strong>
+                <br />
+                <br />
+                The fundraising will be open till end of May or till the 10K
+                goal is reached. After which I will post evidence of my donation
+                for anyone to verify!
+                <br />
+                <br />
+                <strong>Note:</strong> I will be updating the progress bar every
+                day at midnight.
+              </Typography>
+            </Container>
           </AccordionDetails>
         </Accordion>
       </Container>
@@ -169,11 +187,68 @@ export default function Home() {
             <Typography>Places to Donate</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
+            <Container
+              fixed
+              style={{
+                display: "block",
+                textAlign: "justify",
+              }}
+            >
+              <Typography>
+                Some charities I recommend donating too which I know are
+                trustable and transparent are:
+                <ul>
+                  <li>
+                    <a
+                      href="https://www.sewausa.org/Covid-19-Support-Bharath-Fundraiser"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Sewa USA
+                    </a>{" "}
+                    - you can see their charity rating{" "}
+                    <a
+                      href="https://www.charitynavigator.org/index.cfm?bay=search.summary&orgid=17737"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      here
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://ca.gofundme.com/f/oxygen-concentrators-for-central-india?utm_campaign=p_cp_url&utm_medium=os&utm_source=customer"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      AWGP
+                    </a>{" "}
+                    - you can see their charity rating{" "}
+                    <a
+                      href="https://www.charitynavigator.org/ein/954505410"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      here
+                    </a>
+                  </li>
+                  <li>
+                    <a
+                      href="https://covid.giveindia.org/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Give India
+                    </a>{" "}
+                    - Another organization doing great work at the ground level!
+                  </li>
+                </ul>
+                <br />I am happy to add any other charity to this list - you can
+                reach me by email:{" "}
+                <strong>krishna.solanki@mail.utoronto.ca</strong> or by text:
+                <strong> +16476549325</strong>
+              </Typography>
+            </Container>
           </AccordionDetails>
         </Accordion>
       </Container>
@@ -181,6 +256,7 @@ export default function Home() {
         maxWidth="md"
         style={{
           marginTop: "10px",
+          marginBottom: "100px",
           display: "block",
         }}
       >
@@ -190,14 +266,44 @@ export default function Home() {
             aria-controls="panel1a-content"
             id="panel1a-header"
           >
-            <Typography>Mental Health Resources</Typography>
+            <Typography>COVID-19 Resources for People in India</Typography>
           </AccordionSummary>
           <AccordionDetails>
-            <Typography>
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-              Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-              eget.
-            </Typography>
+            <Container
+              fixed
+              style={{
+                display: "block",
+                textAlign: "justify",
+              }}
+            >
+              <Typography>
+                Some resources to help deal with the pandemic:
+                <ul>
+                  <li>
+                    <a
+                      href="https://ask4support.in/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Ask4Support
+                    </a>{" "}
+                    - A free mental health service for people in India to get
+                    professional help.
+                  </li>
+                  <li>
+                    <a
+                      href="https://covidsewa.com/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Sewa India Help Desk
+                    </a>{" "}
+                    - A virtual help desk on where to get medical supplies,
+                    oxygen and other resources{" "}
+                  </li>
+                </ul>
+              </Typography>
+            </Container>
           </AccordionDetails>
         </Accordion>
       </Container>
