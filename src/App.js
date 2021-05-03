@@ -1,23 +1,22 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import Home from "./views/home";
+import Fab from "@material-ui/core/Fab";
+import Typography from "@material-ui/core/Typography";
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <Home />
+      <Fab
+        aria-label="submit-donation-proof"
+        className="feedbackIcon"
+        component="button"
+        variant="extended"
+      >
+        <Typography variant="button" display="block">
+          Submit Donation Proof
+        </Typography>
+      </Fab>
     </div>
   );
 }
