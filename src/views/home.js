@@ -93,15 +93,16 @@ export default function Home() {
           style={{ fontSize: "16px" }}
         >
           I started this fundraiser to help support India through the
-          devestating second wave which has left the county reeling as thousands
-          die from shortages of oxygen tanks/concentrators, medical equipment or
-          simply from a lack of medical attention. As of May 3rd 2021, the death
-          count is at approx 219K, with 3K dying every day, and over 19M people
-          infected (experts backed by journalist reports believe the true
-          numbers are far worse). This issue is especially personal as I have
-          loved ones struggling to recover and my story is just one of many. I
-          am sure you may know someone or be that someone whose loved ones are
-          infected or sadly have passed away due to this virus.
+          devastating second wave which has left the country reeling as
+          thousands die from shortages of oxygen tanks/concentrators, medical
+          equipment, or simply from a lack of medical attention. As of May 3rd,
+          2021, the death count is at approx 219K, with 3K dying every day, and
+          over 19M people are infected (experts backed by journalist reports
+          believe the true numbers are far worse). This issue is especially
+          personal as I have loved ones struggling to recover and my story is
+          just one of many. I am sure you may know someone or be that someone
+          whose loved ones have been infected or sadly have passed away due to
+          this virus.
         </Typography>
       </Container>
       <Container
@@ -114,10 +115,10 @@ export default function Home() {
       >
         <Typography variant="subtitle1" component="body">
           <strong>
-            If you cannot donate, please share this site to those who can and
+            If you cannot donate, please share this site with those who can and
             reach out to friends/coworkers who have family in India and check up
             on them! With covid restrictions, mental health is more important
-            then ever, be kind and take care of each other!
+            than ever, be kind and take care of each other!
           </strong>
         </Typography>
       </Container>
@@ -140,7 +141,7 @@ export default function Home() {
       >
         <Typography variant="h6" component="h6">
           <strong>
-            My min goal is to raise 5K CAD, with the max goal of 10K CAD. I will
+            My min goal is to raise 5K CAD, with a max goal of 10K CAD. I will
             be matching the final amount to double your generous donations!{" "}
           </strong>
         </Typography>
@@ -212,8 +213,7 @@ export default function Home() {
               }}
             >
               <Typography>
-                Some charities I recommend donating too which I know are
-                trustable and transparent are:
+                Some charities which I know are trustable and transparent:
                 <ul>
                   <li>
                     <a
