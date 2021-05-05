@@ -17,7 +17,7 @@ function App() {
         rel="noreferrer"
       >
         <Typography variant="button" display="block">
-          Submit Donation Proof
+          Submit Donation Amount
         </Typography>
       </Fab>
     </div>
