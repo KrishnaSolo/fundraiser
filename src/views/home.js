@@ -130,7 +130,10 @@ export default function Home() {
           justifyContent: "center",
         }}
       >
-        <LinearProgressWithLabel value={0} amt={0.0} />
+        <LinearProgressWithLabel
+          value={Math.round((775.24 / 10000) * 100)}
+          amt={775.24}
+        />
       </Container>
       <Container
         maxWidth="md"
@@ -170,10 +173,10 @@ export default function Home() {
               }}
             >
               <Typography>
-                After donating, take a screenshot of the donation receipt and
-                click on the submit proof button. You will be directed to a
-                google form where you can attach the proof. If for some reason
-                the form is not working - email me directly at{" "}
+                After donating, click on submit donation. This will direct you
+                to a google form where you can add how much you donated and
+                optionally upload the receipt. If the form is not working or
+                inconvenient - email me directly at{" "}
                 <strong>krishna.solanki@mail.utoronto.ca.</strong>
                 <br />
                 <br />
@@ -222,6 +225,14 @@ export default function Home() {
                       rel="noreferrer"
                     >
                       Sewa USA
+                    </a>
+                    {" - "}
+                    <a
+                      href="https://ca.gofundme.com/f/covid-oxygen-concentrators-relief-for-india-by-s?utm_campaign=p_cp_url&utm_medium=os&utm_source=customer"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      (For canadians, use this)
                     </a>{" "}
                     - you can see their charity rating{" "}
                     <a
