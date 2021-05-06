@@ -131,8 +131,8 @@ export default function Home() {
         }}
       >
         <LinearProgressWithLabel
-          value={Math.round((775.24 / 10000) * 100)}
-          amt={775.24}
+          value={Math.round((945.24 / 10000) * 100)}
+          amt={945.24}
         />
       </Container>
       <Container
@@ -186,7 +186,7 @@ export default function Home() {
                 <br />
                 <br />
                 <strong>Note:</strong> I will be updating the progress bar every
-                day at midnight.
+                day at Noon (est).
               </Typography>
             </Container>
           </AccordionDetails>
