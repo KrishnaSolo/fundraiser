@@ -131,8 +131,8 @@ export default function Home() {
         }}
       >
         <LinearProgressWithLabel
-          value={Math.round((945.24 / 10000) * 100)}
-          amt={945.24}
+          value={Math.round((1305.24 / 10000) * 100)}
+          amt={1305.24}
         />
       </Container>
       <Container
@@ -269,6 +269,17 @@ export default function Home() {
                       Give India
                     </a>{" "}
                     - Another organization doing great work at the ground level!
+                  </li>
+                  <li>
+                    <a
+                      href="https://www.facebook.com/donate/471073180772113/"
+                      target="_blank"
+                      rel="noreferrer"
+                    >
+                      Help India Breathe!
+                    </a>{" "}
+                    - Fundraiser for Give India -{" "}
+                    <strong>Up to $1 Million will be matched!</strong>
                   </li>
                 </ul>
                 <br />I am happy to add any other charity to this list - you can
