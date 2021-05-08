@@ -131,8 +131,8 @@ export default function Home() {
         }}
       >
         <LinearProgressWithLabel
-          value={Math.round((1305.24 / 10000) * 100)}
-          amt={1305.24}
+          value={Math.round((2075.24 / 10000) * 100)}
+          amt={2075.24}
         />
       </Container>
       <Container
