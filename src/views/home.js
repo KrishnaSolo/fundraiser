@@ -10,22 +10,7 @@ import Accordion from "@material-ui/core/Accordion";
 import AccordionSummary from "@material-ui/core/AccordionSummary";
 import AccordionDetails from "@material-ui/core/AccordionDetails";
 import ExpandMoreIcon from "@material-ui/icons/ExpandMore";
-import {
-  EmailShareButton,
-  FacebookShareButton,
-  LinkedinShareButton,
-  RedditShareButton,
-  TelegramShareButton,
-  TwitterShareButton,
-  WhatsappShareButton,
-  FacebookIcon,
-  TwitterIcon,
-  LinkedinIcon,
-  TelegramIcon,
-  WhatsappIcon,
-  RedditIcon,
-  EmailIcon,
-} from "react-share";
+import { ShareBar } from "../components/shareBar";
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -64,7 +49,6 @@ function LinearProgressWithLabel(props) {
 }
 
 export default function Home() {
-  const shareurl = "https://covid19fundraiser.netlify.app/";
   return (
     <React.Fragment>
       <Container
@@ -345,39 +329,7 @@ export default function Home() {
           </AccordionDetails>
         </Accordion>
       </Container>
-      <Container
-        maxWidth="md"
-        style={{
-          marginTop: "50px",
-          marginBottom: "100px",
-          display: "block",
-        }}
-      >
-        <Typography>
-          <strong>Share: </strong>
-        </Typography>
-        <EmailShareButton url={shareurl}>
-          <EmailIcon size={32} />
-        </EmailShareButton>
-        <FacebookShareButton url={shareurl}>
-          <FacebookIcon size={32} />
-        </FacebookShareButton>
-        <LinkedinShareButton url={shareurl}>
-          <LinkedinIcon size={32} />
-        </LinkedinShareButton>
-        <RedditShareButton url={shareurl}>
-          <RedditIcon size={32} />
-        </RedditShareButton>
-        <TelegramShareButton url={shareurl}>
-          <TelegramIcon size={32} />
-        </TelegramShareButton>
-        <TwitterShareButton url={shareurl}>
-          <TwitterIcon size={32} />
-        </TwitterShareButton>
-        <WhatsappShareButton url={shareurl}>
-          <WhatsappIcon size={32} />
-        </WhatsappShareButton>
-      </Container>
+      <ShareBar />
     </React.Fragment>
   );
 }
