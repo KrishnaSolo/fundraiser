@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useCallback, useState } from "react";
 import Typography from "@material-ui/core/Typography";
 import Container from "@material-ui/core/Container";
 import Box from "@material-ui/core/Box";
@@ -6,6 +6,13 @@ import Tooltip from "@material-ui/core/Tooltip";
 //import Grid from "@material-ui/core/Grid";
 import { withStyles } from "@material-ui/core/styles";
 import LinearProgress from "@material-ui/core/LinearProgress";
+import Button from "@material-ui/core/Button";
+import Dialog from "@material-ui/core/Dialog";
+import DialogActions from "@material-ui/core/DialogActions";
+import DialogContent from "@material-ui/core/DialogContent";
+import DialogTitle from "@material-ui/core/DialogTitle";
+import sewaProof from "../images/195011539_236119961279495_3306847529746484108_n.jpg";
+import awgpProof from "../images/195072035_231169078540036_5971593227133574664_n.jpg";
 
 const BorderLinearProgress = withStyles((theme) => ({
   root: {
@@ -44,6 +51,11 @@ function LinearProgressWithLabel(props) {
 }
 
 export const ProgressBar = () => {
+  const [open, setOpen] = useState(false);
+  const handleClick = useCallback(() => {
+    const newState = !open;
+    setOpen(newState);
+  }, [open]);
   return (
     <>
       <Container
@@ -68,10 +80,43 @@ export const ProgressBar = () => {
       >
         <Typography variant="h6" component="h6">
           <strong>
-            My min goal is to raise 5K CAD, with a max goal of 10K CAD. I will
-            be matching the final amount to double your generous donations!{" "}
+            Update: Thank you everyone for donating! We raised 6.3k which I have
+            matched. You can see my receipts below:
           </strong>
         </Typography>
+        <Button
+          variant="outlined"
+          color="primary"
+          onClick={handleClick}
+          style={{ marginTop: "20px" }}
+        >
+          Proof
+        </Button>
+        <Dialog
+          open={open}
+          onClose={handleClick}
+          aria-labelledby="proof"
+          aria-describedby="donation proof"
+        >
+          <DialogTitle id="proof">Proof</DialogTitle>
+          <DialogContent>
+            <img
+              src={sewaProof}
+              style={{ border: "5px solid #ddd" }}
+              alt="donation receipt for sewa"
+            />
+            <img
+              src={awgpProof}
+              style={{ border: "5px solid #ddd", marginTop: "10px" }}
+              alt="donation receipt for awgp"
+            />
+          </DialogContent>
+          <DialogActions>
+            <Button onClick={handleClick} color="primary" autoFocus>
+              Close
+            </Button>
+          </DialogActions>
+        </Dialog>
       </Container>
     </>
   );
